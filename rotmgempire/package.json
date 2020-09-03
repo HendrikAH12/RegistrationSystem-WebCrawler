@@ -1,0 +1,32 @@
+{
+  "name": "rotmgempire",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcrypt": "^4.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^3.4.1",
+    "cheerio": "^1.0.0-rc.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "express-handlebars": "^4.0.4",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.16",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "puppeteer": "^3.3.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

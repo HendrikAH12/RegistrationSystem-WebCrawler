@@ -1,0 +1,54 @@
+{{>_nav}}
+<div class="container mt-4" id="container">
+
+{{#each erros}}
+    <div class="alert alert-danger">
+        {{text}}
+    </div>
+{{else}}
+{{/each}}
+
+<style>
+
+    label{
+        margin-top: 6px;
+    }
+
+    label#top{
+        margin-top: 10px;
+    }
+
+    div#color{
+        background-color: #303030;
+        color: white;
+    }
+
+    div#margin{
+        background-color: black;
+    }
+
+    div#container{
+        padding-top: 15px;
+    }
+
+    button{
+        margin-bottom: 14px;
+    }
+
+</style>
+
+<div class="card" id="margin">
+    <div class="card-body" id="color">
+        <form action="/changepassword" method="POST">
+                <input type="hidden" name="username" class="form-control" value="{{username}}" readonly="readonly">
+           <label for="password">Password: </label>
+                <input type="password" name="password" class="form-control" required>
+            <label for="newPassword">New Password: </label>
+                <input type="password" name="newPassword" class="form-control" required>
+            <label for="newPasswordC">Confirm New Password: </label>
+                <input type="password" name="newPasswordC" class="form-control" required>
+            <button type="submit" class="btn btn-success mt-3">Change Password</button>
+        </form>
+    </div>
+</div>
+</div>

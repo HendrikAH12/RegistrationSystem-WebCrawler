@@ -1,0 +1,97 @@
+{{>_nav}}
+
+<div class="container mt-4" id="container">
+
+<style>
+
+    label{
+        margin-top: 6px;
+    }
+
+    label#top{
+        margin-top: 10px;
+    }
+
+    div#color{
+        background-color: #303030;
+        color: white;
+    }
+
+    div#margin{
+        background-color: black;
+    }
+
+    div#msg{
+        text-align: center;
+    }
+
+    div#msg a{
+        background-color: #484848;
+        color: rgb(228, 93, 172);
+        font-size: 15pt;
+    }
+
+    div#container{
+        padding-top: 15px;
+    }
+
+    button{
+        margin-bottom: 14px;
+    }
+
+    input#hidden{
+        background-color: #303030;
+        color: #303030;
+        border-color: black;
+    }
+
+    a#danger{
+        color: rgb(228, 93, 172);
+    }
+
+    a#msg{
+        color: rgb(93, 228, 172);
+    }
+
+</style>
+
+<div class="card" id="margin">
+<div class="card-body" id="color">
+
+    <label for="" id="top">Username: </label>
+        <input type="text" name="" class="form-control" readonly="readonly" value="{{username}}">
+    <label for="">In Game Name (<a href="javascript:binary()" onclick="binary()" id="danger">Show</a><a href="javascript:binary2()" onclick="binary2()" id="msg">Hide</a>): </label>
+        <input type="text" name="" class="form-control" readonly="readonly" value="{{ign}}" id="hideign">
+        <input type="text" name="" class="form-control" readonly="readonly" value="" id="hidden">
+    <label for="">Realm Points: </label>
+        <input type="number" name="" class="form-control" readonly="readonly" value="{{rp}}">
+    <label for="" id="bottom"></label>
+
+</div>
+</div>
+</div>
+
+<div class="card-body" id="msg">
+    <a href="/changepassword">Want to change your password?</a>
+</div>
+
+<script>
+    
+    document.getElementById('hideign').type = 'hidden'
+    document.getElementById('msg').style.display = 'none'
+
+    function binary(){
+        document.getElementById('hideign').type = 'text'
+        document.getElementById('hidden').type = 'hidden'
+        document.getElementById('danger').style.display = 'none'
+        document.getElementById('msg').style.display = ''
+    }
+
+    function binary2(){
+        document.getElementById('hideign').type = 'hidden'
+        document.getElementById('hidden').type = 'text'
+        document.getElementById('danger').style.display = ''
+        document.getElementById('msg').style.display = 'none'
+    }
+
+</script>

@@ -1,0 +1,62 @@
+{{>_nav}}
+
+<div class="container mt-4">
+
+    <style>
+
+        label{
+            margin-top: 3px;
+        }
+
+        div#color{
+            background-color: #303030;
+            color: white;
+        }
+
+        div#margin{
+            background-color: black;
+        }
+
+        div#msgdanger{
+            background-color: #484848;
+            color: rgb(228, 93, 172);
+            font-size: 15pt;
+            text-align: center;
+            margin-bottom: -15px;
+            margin-top: -22px;
+        }
+
+    </style>
+
+    <div class="card-body" id="msgdanger">
+        <p>The account verification can take 45 seconds after clicking on save new password button</p>
+    </div>
+
+    {{#each erros}}
+        <div class="alert alert-danger">
+            {{text}}
+        </div>
+    {{else}}
+    {{/each}}
+
+    <div class="card" id="margin">
+        <div class="card-body" id="color">
+            <form action="/forgotpassword" method="POST">
+                <label for="username">Username: </label>
+                    <input type="text" name="username" class="form-control" required>
+                <label for="newPassword">New Password: </label>
+                    <input type="password" name="newPassword" class="form-control" required>
+                <label for="newPasswordC">Confirm New Password: </label>
+                    <input type="password" name="newPasswordC" class="form-control" required>
+                <label for="verifyhash">Realmeye Code: </label>
+                    <input type="text" name="verifyhash" class="form-control" value="" id="verifyhash" readonly="readonly">
+                <button type="submit" class="btn btn-success mt-3">Save New Password</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    const hash = Math.random() * 10000000000000000000
+    document.getElementById('verifyhash').value = hash
+</script>

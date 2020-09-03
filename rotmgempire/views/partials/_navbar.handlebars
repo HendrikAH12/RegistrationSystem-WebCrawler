@@ -1,0 +1,51 @@
+<style>
+    
+    nav{
+        background-color: #606060;
+        position: relative;
+    }
+    
+    a{
+        color: white;
+        margin: 0px;
+    }
+    
+    a:hover{
+        color: black;
+    }
+
+    ul#nav{
+        position: absolute;
+        top: 0px;
+    }
+
+</style>
+
+<nav>
+    <div>
+        <ul class="nav" id="nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="/">Home</a>
+            </li>
+        </ul>
+        {{#if user}}
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile">Profile</a>
+                </li>
+                <li class="nav-item" id="left">
+                    <a class="nav-link" href="/logout">Log Out</a>
+                </li>
+            </ul>
+        {{else}}
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Log In</a>
+                </li>
+                <li class="nav-item" id="left">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+            </ul>
+        {{/if}}
+    </div>
+</nav>
